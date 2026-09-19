@@ -7,6 +7,12 @@ def style_background_home():
             .stApp{
                 background:#EBE9E1 !important ;
                 }
+
+         .stApp div[data-testid="stColumn"]{
+                    background-color:#E0E3FF !important;
+                    padding:2.5rem !important;
+                    border-radius: 5rem !important;
+                    }
         </style>
                 """
                 ,unsafe_allow_html=True)
@@ -57,7 +63,7 @@ def style_base_layout():
 
         h2 {
                 font-family: "Libre Baskerville", serif !important;
-             font-size:2.5rem !important;
+             font-size:2rem !important;
              font-style:normal !important;
                  line-height:1.1 !important ;
                  margin-bottom:0rem !important;
@@ -70,16 +76,16 @@ def style_base_layout():
           }
 
         button[kind="primary"]{
-                background: #0A21C0!important;
+                background: #EBE9E1!important;
                border-radius:1.5rem !important;
-                color:#E43D12 !important;
+                color:#EBE9E1 !important;
                 padding: 10px 20px !important;
              border: none !important;
                 transition: transform 0.25s ease-in-out !important;
                   }
         
         button[kind="secondary"]{
-        background: #0A21C0 !important;
+        background: #EBE9E1 !important;
         border-radius:1.5rem !important;
         color:#E43D12 !important;
         padding: 10px 20px !important;
@@ -88,7 +94,7 @@ def style_base_layout():
           }
 
         button[kind="tertiary"]{
-                background: #0A21C0 !important;
+                background:#EBE9E1 !important;
           border-radius:1.5rem !important;
                 color:#E43D12 !important;
                 padding: 10px 20px !important;
