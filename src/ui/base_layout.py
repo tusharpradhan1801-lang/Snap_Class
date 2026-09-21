@@ -17,6 +17,23 @@ def style_background_home():
                 """
                 ,unsafe_allow_html=True)
 
+def style_background_dashboard():
+    st.markdown("""
+        <style> 
+            .stApp{
+                background:#EBE9E1 !important ;
+                }
+
+         .stApp div[data-testid="stColumn"]{
+                    background-color:#E0E3FF !important;
+                    padding:2.5rem !important;
+                    border-radius: 5rem !important;
+                    }
+        </style>
+                """
+                ,unsafe_allow_html=True)
+
+
 def style_base_deshboard():
     st.markdown("""
         <style> 

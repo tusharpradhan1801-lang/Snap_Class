@@ -1,4 +1,60 @@
 import streamlit as st 
+from src.ui.base_layout import style_background_dashboard, style_base_layout
+from src.components.header import header_dashboard
 
 def teacher_screen():
-    st.header("Teacher screen ")
+
+    style_background_dashboard()
+    style_base_layout()
+
+   
+     
+     
+
+   
+    st.header("Register your teacher profile ")
+
+
+def teacher_screen_login():
+    c1,c2 = st.columns(2 ,vertical_alignment='center',gap="xxlarge")
+    with c1:
+        header_dashboard()
+    with c2:
+        st.button("go bsck to home ",type='secondary',key='longinbackin',shortcut="alt+backspace")
+          
+    st.header('Login using password',text_alignment='center')
+    st.space()
+    teacher_username = st.text_input("Enter username ",placeholder='ananayaroy')
+    teacher_pass = st.text_input("Enter password",type='password', placeholder='password')
+
+    btnc1, btnc2 = st.columns(2)
+
+    with btnc1:
+        if st.button('Register now', icon=':material/passkey:', shortcut='control+enter', width='stretch'):
+            success, message = register_teacher(teacher_username, teacher_name, teacher_pass, teacher_pass_confirm)
+            if success:
+                st.success(message)
+                import time
+                time.sleep(2)
+                st.session_state.teacher_login_type = "login"
+                st.rerun()
+            else:
+                st.error(message)
+
+
+    with btnc2:
+        if st.button('Login Instead', type="primary", icon=':material/passkey:', width='stretch'):
+            st.session_state.teacher_login_type = 'login'
+
+     
+
+
+
+def teacher_screen_register():
+    c1,c2 = st.columns(2 ,vertical_alignment='center',gap="xxlarge")
+    with c1:
+        header_dashboard()
+    with c2:
+        st.button("go bsck to home ",type='secondary',key='longinbackin',shortcut="alt+backspace")
+              
+    
